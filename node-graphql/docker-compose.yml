@@ -1,0 +1,17 @@
+
+# node-graphql/docker-compose.yml
+
+version: '3.3'
+services:
+  postgres:
+    image: postgres:13
+    restart: always
+    environment:
+      - POSTGRES_USER=noleykuz
+      - POSTGRES_PASSWORD=nnennaeze
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+volumes:
+  postgres:
